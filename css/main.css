@@ -1,0 +1,94 @@
+/**********************  TOGGLE CLASSES  ***********************/
+.disabled {
+  opacity: 0.5;
+  pointer-events: none; }
+
+/*Cards displayed on the same page but are not active*/
+/********************************************
+**                   BODY                  **
+********************************************/
+body {
+  background: url("../img/awkFam.jpg") center center fixed;
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+/********************************************
+**                NAVIGATION               **
+********************************************/
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #EEE9E0;
+  opacity: .9; }
+  .navbar li {
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    justify-content: center; }
+  .navbar button {
+    margin: 10% auto;
+    background-color: #A42E37; }
+  .navbar button:hover {
+    background-color: #C3D7D3; }
+
+/********************************************
+**              MEMBER CARDS               **
+********************************************/
+#famMemContainer {
+  height: 500px;
+  overflow: auto;
+  margin-left: 12%; }
+
+.myFamCard {
+  text-align: center;
+  margin: 10px;
+  height: 200px;
+  padding: 5px;
+  overflow: auto;
+  border: 5px solid #83afbc;
+  opacity: .8; }
+  .myFamCard h2, .myFamCard h3, .myFamCard h4, .myFamCard h5 {
+    margin: 1px; }
+  .myFamCard .memMoreInfo {
+    margin: 8px auto; }
+  .myFamCard ul {
+    list-style: none;
+    margin-top: 8px;
+    padding: 0; }
+  .myFamCard li {
+    margin: 0; }
+  .myFamCard button {
+    margin: 0;
+    display: inline-block;
+    padding: 10%; }
+  .myFamCard .col-md-2 {
+    padding: 0; }
+  .myFamCard .col-md-8 {
+    padding: 0; }
+  .myFamCard span {
+    width: 80%;
+    margin: 0; }
+
+.child {
+  background-color: #E6955F; }
+
+.adult {
+  background-color: #7BB1B2; }
+
+.headerRow {
+  width: 90%;
+  margin: 0 5%; }
+
+.editButton {
+  box-sizing: border-box;
+  width: 98%;
+  margin: 0 1%;
+  border-radius: 10%;
+  background-color: #EEE9E0; }
+
+.deleteButton {
+  box-sizing: border-box;
+  width: 98%;
+  margin: 0 1%;
+  border-radius: 10%;
+  background-color: #EEE9E0; }

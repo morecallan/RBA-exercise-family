@@ -13,6 +13,55 @@
 
 
 <body>
+  <!-- NAVIGATION -->
+  <ul class="navbar navbar-default">
+    <li class="col-md-9"><h3>My Dumb Ol' Family</h3></li>
+    <li class="col-md-3"><button class="btn btn-info" id="openAddMemberModal" data-toggle="modal" data-target="#addMemberModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Family Member</button></li>
+  </ul>
+
+  <!-- MEMBER CONTAINER -->
+  <div class="container" id="famMemContainer"></div>
+
+  <!-- MODAL FOR THEMES - If you put inside body, it applies themes to modal. -->
+    <div class="modal" id="addMemberModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="themeModalLabel">Add a family member. Carefully</h4>
+          </div>
+
+          <div class="modal-body">
+            <!-- Building the Add Member Form -->
+            <form id="addNewMemberForm" class="container-fluid">
+              <label for="firstName">Family Member:
+                <input type="text" id="memberName" placeholder="First Last" name="memberName">
+              </label> 
+              <label for="firstName">Family Member Age:
+                <input type="number" id="memberAge" placeholder="Age"  maxlength="3" name="memberAge">
+              </label>
+              <label for="memberGender">Family Member Gender:
+                <select name="memberGender" id="memberGender">
+                  <option value="Female">Female</option> 
+                  <option value="Male">Male</option>
+                </select>
+              </label>
+              <label for="memberSkills">Family Member Skills:
+                <textarea  id="memberSkills" placeholder="Skills" name="memberSkills"></textarea>
+              </label>    
+              <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal" id="addFamilyMemberComplete">Add Member</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of the MODAL-->
+
+
+
+
     
   <!-- Firebase -->
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
@@ -20,6 +69,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Bootstrap: Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
 </html>
