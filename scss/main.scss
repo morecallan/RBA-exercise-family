@@ -1,0 +1,148 @@
+$tidewater: #C3D7D3;
+$marshmallow: #EEE9E0;
+$show-stopper: #A42E37;
+$reflecting-pool: #7BB1B2;
+$parakeet: #B4B05A;
+$outgoing-orange: #E6955F;
+$open-seas: #83AFBC;
+$nurture-green: #98B092;
+$notable-hue: #8BA7BB;
+$emerald: #498555;
+$functional-gray: #ABA39A;
+$ember-glow: #D67C56;
+$denim: #506B84;
+$coral-reef: #D9766C;
+$classic-yellow: #F8D492;
+$black-fox: #4F4842;
+$balanced-beige: #C0B2A2;
+$alexandrite: #598C74;
+$afternoon: #FBCB78;
+$accessible-beige: #D1C7B8;
+
+
+/**********************  TOGGLE CLASSES  ***********************/
+.disabled {   
+  opacity: 0.5;
+  pointer-events: none;
+} /*Cards displayed on the same page but are not active*/
+
+
+
+
+
+/********************************************
+**                   BODY                  **
+********************************************/
+body {
+    background: url("../img/awkFam.jpg") center center fixed;
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/********************************************
+**                NAVIGATION               **
+********************************************/
+
+.navbar {
+display: flex;
+justify-content: center;
+background-color: $marshmallow;
+opacity: .9;
+
+    li {
+        list-style: none;
+        text-align: center;
+        display: inline-block;
+        justify-content: center;
+
+    }
+
+    button {
+        margin: 10% auto;
+        background-color: $show-stopper;
+    }
+
+    button:hover {
+        background-color: $tidewater;
+    }
+}
+
+/********************************************
+**              MEMBER CARDS               **
+********************************************/
+#famMemContainer {
+    height: 500px;
+    overflow: auto;
+    margin-left: 12%;
+}
+
+
+.myFamCard {
+        text-align: center;
+        margin: 10px;
+        height: 200px;
+        padding: 5px;
+        overflow: auto;
+        border: 5px solid rgba($open-seas, 80);
+        opacity: .8;
+    h2, h3, h4, h5 {
+        margin: 1px;
+    }
+    .memMoreInfo {
+        margin: 8px auto;
+    }
+    ul {
+        list-style: none;
+        margin-top: 8px;
+        padding: 0;
+    }
+    li {
+        margin: 0;
+    }
+    button {
+        margin: 0;
+        display: inline-block;
+        padding: 10%;
+    }
+    .col-md-2 {
+        padding: 0;
+    }
+    .col-md-8 {
+        padding: 0;
+    }
+    span {
+        width: 80%;
+        margin: 0;
+    }
+}
+
+.child {
+    background-color: $outgoing-orange;
+}
+.adult {
+    background-color: $reflecting-pool;
+}
+
+.headerRow {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.editButton {
+    box-sizing: border-box;
+    width: 98%;
+    margin: 0 1%;
+    border-radius: 10%;
+    background-color: $marshmallow;
+}
+
+.deleteButton {
+    box-sizing: border-box;
+    width: 98%;
+    margin: 0 1%;
+    border-radius: 10%;
+    background-color: $marshmallow;
+}
