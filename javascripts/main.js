@@ -8,7 +8,8 @@
 let $ = require("jquery"),
     addMem = require("./add.js"),
     deleteMem = require("./delete.js"),
-    listMem = require("./list.js");
+    listMem = require("./list.js"),
+    editMem = require("./edit.js");
 
 
 
@@ -27,6 +28,7 @@ function loadUpMySongsFromFirebase() {
 loadUpMySongsFromFirebase();
 addMem.getLoadFunctionFromMain(loadUpMySongsFromFirebase);
 deleteMem.getLoadFunctionFromMain(loadUpMySongsFromFirebase);
+editMem.getLoadFunctionFromMain(loadUpMySongsFromFirebase);
 
 //When user first lands on the page, show member list and add button in top nav
 //Clicking on the add button brings up modal
