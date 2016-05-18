@@ -5,7 +5,8 @@
 **          Browserify Dependencies        **
 ********************************************/
 let $ = require("jquery"),
-    deleteMem = require("./delete.js");
+    deleteMem = require("./delete.js"),
+    editMem = require("./edit.js");
 
 
 function populateDom(data) {
@@ -29,7 +30,7 @@ for (var member in data) {
 
     //Building the String
     buildString += `<section class="col-md-3 myFamCard ${cardClass}" data-key=${member}> <div class="row headerRow">`;
-    buildString += `<div class="col-md-2"><button class="btn editButton"><span class="glyphicon glyphicon-pencil"></span></button></div>`;
+    buildString += `<div class="col-md-2"><button class="btn editButton" data-toggle="modal" data-target="#editMemberModal"><span class="glyphicon glyphicon-pencil"></span></button></div>`;
     buildString += `<div class="col-md-8"><h2>${familyMem.name} </h2></div>`;
     buildString += `<div class="col-md-2"><button class="btn deleteButton"><span class="glyphicon glyphicon-trash"></span></button></div></div>`;
     buildString += `<div class="memMoreInfo"><h5>Age: ${familyMem.age} </h5>`;
@@ -45,6 +46,7 @@ for (var member in data) {
     hideEditAndDeleteButtons();
     activateFamCardHover();
     deleteMem.activateDeleteButtonEvents();
+    editMem.activateEditButtonEvents();
 }
 
 function activateFamCardHover(){
